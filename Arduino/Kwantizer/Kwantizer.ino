@@ -25,43 +25,6 @@ long int trigger_out_width = 10;
 bool reset_trigger_out = false;
 long int last_trigger_out_millis = millis();
 
-
-/////////// ROTARY ENCODERS //////////
-
-uint8_t volatile D10D11_state = 0b1111;
-uint8_t volatile D6D7_state = 0b1111;
-
-int8_t volatile new_root = 0;
-int8_t volatile new_scale = 0;
-
-bool volatile rotary_change = false;
-//////////////////////////////////////
-
-uint16_t compute_scale_mask(){
-  uint8_t note_count = 0;
-  uint16_t scale_mask = 0;
-
-  if(digitalRead(NOTE_PIN_C)) { scale_mask = scale_mask | 0b100000000000; note_count++;}
-  if(digitalRead(NOTE_PIN_CS)){ scale_mask = scale_mask | 0b010000000000; note_count++;}
-  if(digitalRead(NOTE_PIN_D)) { scale_mask = scale_mask | 0b001000000000; note_count++;}
-  if(digitalRead(NOTE_PIN_DS)){ scale_mask = scale_mask | 0b000100000000; note_count++;}
-  if(digitalRead(NOTE_PIN_E)) { scale_mask = scale_mask | 0b000010000000; note_count++;}
-  if(digitalRead(NOTE_PIN_F)) { scale_mask = scale_mask | 0b000001000000; note_count++;}
-  if(digitalRead(NOTE_PIN_FS)){ scale_mask = scale_mask | 0b000000100000; note_count++;}
-  if(digitalRead(NOTE_PIN_G)) { scale_mask = scale_mask | 0b000000010000; note_count++;}
-  if(digitalRead(NOTE_PIN_GS)){ scale_mask = scale_mask | 0b000000001000; note_count++;}
-  if(digitalRead(NOTE_PIN_A)) { scale_mask = scale_mask | 0b000000000100; note_count++;}
-  if(digitalRead(NOTE_PIN_AS)){ scale_mask = scale_mask | 0b000000000010; note_count++;}
-  if(digitalRead(NOTE_PIN_B)) { scale_mask = scale_mask | 0b000000000001; note_count++;}
-
-  current_scale_mask = scale_mask;
-  nb_notes_in_scale = note_count;
-  Serial.println(current_scale_mask);
-  Serial.println(note_count);
-  
-  return scale_mask;
-}
-
 void setup() {
   cli();
   PCICR |= 0b00000101;
@@ -138,7 +101,7 @@ void loop() {
   uint8_t semitone_index = current_root_semitone + semitones_above_root_in_scale;
 
   semitone_index = min(semitone_index, MAX_DAC_SEMITONE - 1);
-//  
+
 //  Serial.print(" Note Out: ");
 //  Serial.println((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
 
@@ -153,10 +116,30 @@ void loop() {
 
 }
 
-///////////// Utilities //////////////
 
-int mod(int x, int m) {
-  return (x % m + m) % m;
+uint16_t compute_scale_mask(){
+  uint8_t note_count = 0;
+  uint16_t scale_mask = 0;
+
+  if(digitalRead(NOTE_PIN_C)) { scale_mask = scale_mask | 0b100000000000; note_count++;}
+  if(digitalRead(NOTE_PIN_CS)){ scale_mask = scale_mask | 0b010000000000; note_count++;}
+  if(digitalRead(NOTE_PIN_D)) { scale_mask = scale_mask | 0b001000000000; note_count++;}
+  if(digitalRead(NOTE_PIN_DS)){ scale_mask = scale_mask | 0b000100000000; note_count++;}
+  if(digitalRead(NOTE_PIN_E)) { scale_mask = scale_mask | 0b000010000000; note_count++;}
+  if(digitalRead(NOTE_PIN_F)) { scale_mask = scale_mask | 0b000001000000; note_count++;}
+  if(digitalRead(NOTE_PIN_FS)){ scale_mask = scale_mask | 0b000000100000; note_count++;}
+  if(digitalRead(NOTE_PIN_G)) { scale_mask = scale_mask | 0b000000010000; note_count++;}
+  if(digitalRead(NOTE_PIN_GS)){ scale_mask = scale_mask | 0b000000001000; note_count++;}
+  if(digitalRead(NOTE_PIN_A)) { scale_mask = scale_mask | 0b000000000100; note_count++;}
+  if(digitalRead(NOTE_PIN_AS)){ scale_mask = scale_mask | 0b000000000010; note_count++;}
+  if(digitalRead(NOTE_PIN_B)) { scale_mask = scale_mask | 0b000000000001; note_count++;}
+
+  current_scale_mask = scale_mask;
+  nb_notes_in_scale = note_count;
+  Serial.println(current_scale_mask);
+  Serial.println(note_count);
+  
+  return scale_mask;
 }
 
 uint16_t rotate12Left(uint16_t n, uint16_t d) {
