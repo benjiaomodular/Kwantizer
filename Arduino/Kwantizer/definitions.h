@@ -1,4 +1,5 @@
-#define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
+#define OLED_RESET  4 // Reset pin # (or -1 if sharing Arduino reset pin)
+#define TUNING_PIN A0
 #define NOTE_PIN_C 2
 #define NOTE_PIN_D 3
 #define NOTE_PIN_E 4

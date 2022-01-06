@@ -34,6 +34,7 @@ void setup() {
 
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(TUNING_PIN, INPUT);
   pinMode(NOTE_PIN_C, INPUT);
   pinMode(NOTE_PIN_CS, INPUT);
   pinMode(NOTE_PIN_D, INPUT);
@@ -105,8 +106,11 @@ void loop() {
 //  Serial.print(" Note Out: ");
 //  Serial.println((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
 
-  MCP.setValue((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
-
+  if (digitalRead(TUNING_PIN)){
+    MCP.setValue(4095);
+  } else {
+    MCP.setValue((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
+  }
   
   if (last_semitone_index != semitone_index) {
     reset_trigger_out = true;
@@ -136,8 +140,8 @@ uint16_t compute_scale_mask(){
 
   current_scale_mask = scale_mask;
   nb_notes_in_scale = note_count;
-  Serial.println(current_scale_mask);
-  Serial.println(note_count);
+//  Serial.println(current_scale_mask);
+//  Serial.println(note_count);
   
   return scale_mask;
 }
