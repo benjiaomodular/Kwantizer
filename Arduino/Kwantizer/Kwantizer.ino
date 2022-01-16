@@ -7,10 +7,6 @@
 MCP4725 MCP(0x60);
 ADS1115 ADS(0x48);
 
-
-bool tuning_dac = false;
-bool tuning_adc = false;
-
 uint16_t current_scale_mask = 0;
 uint8_t nb_notes_in_scale = 0;
 
@@ -19,12 +15,16 @@ uint8_t current_root_semitone = 1; // Force refresh at start
 // in_scale_cv_mode = 0 ->  1 semitone / 83 mV  (non-constant CV difference to change note in scale)
 //                  = 1 ->  1 note in_scale / 83 mV (constant CV difference to change note in scale
 bool volatile in_scale_cv_mode = true;
+bool is_tuning = false;
 
 uint8_t last_semitone_index = 0;
+int16_t cv_to_quantize = 0;
+
 long int trigger_out_width = 10;
 bool reset_trigger_out = false;
 long int last_trigger_out_millis = millis();
 
+  
 void setup() {
   cli();
   PCICR |= 0b00000101;
@@ -65,16 +65,13 @@ void loop() {
   uint16_t temp_scale_mask = compute_scale_mask();
   uint8_t note_in_scale;
   uint8_t root_semitone;
-  int16_t cv_to_quantize = ADS.readADC(0);
-
-//  Serial.print("CV In: ");
-//  Serial.print(cv_to_quantize);
-//  Serial.print("\t");
-
-  if (reset_trigger_out && millis() - last_trigger_out_millis >= trigger_out_width) {
-//    digitalWrite(TRIGGER_OUT_PIN, LOW);
-    reset_trigger_out = false;
-  }
+  
+  cv_to_quantize = ADS.readADC(0);
+  is_tuning = digitalRead(TUNING_PIN);
+  
+  Serial.print("CV In: ");
+  Serial.print(cv_to_quantize);
+  Serial.print("\t");
 
   nb_notes_in_scale = 12;
 
@@ -103,19 +100,13 @@ void loop() {
 
   semitone_index = min(semitone_index, MAX_DAC_SEMITONE - 1);
 
-//  Serial.print(" Note Out: ");
-//  Serial.println((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
-
-  if (digitalRead(TUNING_PIN)){
+  Serial.print(" Note Out: ");
+  Serial.println((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
+  
+  if (is_tuning){
     MCP.setValue(4095);
   } else {
     MCP.setValue((int16_t)pgm_read_word_near(semitone_cvs_dac + semitone_index));
-  }
-  
-  if (last_semitone_index != semitone_index) {
-    reset_trigger_out = true;
-    last_semitone_index = semitone_index;
-    last_trigger_out_millis = millis();
   }
 
 }
@@ -140,7 +131,7 @@ uint16_t compute_scale_mask(){
 
   current_scale_mask = scale_mask;
   nb_notes_in_scale = note_count;
-//  Serial.println(current_scale_mask);
+//  Serial.println(current_scale_mask, BIN);
 //  Serial.println(note_count);
   
   return scale_mask;

@@ -151,7 +151,7 @@
   )
 
   (module benjiaomodular:Panel_6HP (layer F.Cu) (tedit 61B04054) (tstamp 61D8D2E5)
-    (at 90 40)
+    (at 30 44)
     (fp_text reference REF** (at 0 0.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
@@ -183,7 +183,7 @@
   )
 
   (module Module:Arduino_Nano (layer B.Cu) (tedit 58ACAF70) (tstamp 61D84656)
-    (at 134 126.5)
+    (at 74 130.5)
     (descr "Arduino Nano, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf")
     (tags "Arduino Nano")
     (path /61D6EF47)
@@ -278,7 +278,7 @@
   )
 
   (module benjiaomodular:Capacitor_Disc_D3.8mm_W2.6mm_P2.50mm (layer F.Cu) (tedit 61CAAE02) (tstamp 61D8466A)
-    (at 221.210001 105.440001)
+    (at 161.210001 109.440001)
     (path /61FA68B9)
     (fp_text reference C1 (at 1 -2.5) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.14)))
@@ -307,7 +307,7 @@
   )
 
   (module Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal (layer F.Cu) (tedit 5AE50CD5) (tstamp 61D84689)
-    (at 243.730001 78.190001)
+    (at 183.730001 82.190001)
     (descr "Diode, DO-35_SOD27 series, Axial, Horizontal, pin pitch=7.62mm, , length*diameter=4*2mm^2, , http://www.diodes.com/_files/packages/DO-35.pdf")
     (tags "Diode DO-35_SOD27 series Axial Horizontal pin pitch 7.62mm  length 4mm diameter 2mm")
     (path /620F41CC)
@@ -360,7 +360,7 @@
   )
 
   (module Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal (layer F.Cu) (tedit 5AE50CD5) (tstamp 61D846A8)
-    (at 210.220001 109.410001)
+    (at 150.220001 113.410001)
     (descr "Diode, DO-35_SOD27 series, Axial, Horizontal, pin pitch=7.62mm, , length*diameter=4*2mm^2, , http://www.diodes.com/_files/packages/DO-35.pdf")
     (tags "Diode DO-35_SOD27 series Axial Horizontal pin pitch 7.62mm  length 4mm diameter 2mm")
     (path /620F5144)
@@ -413,7 +413,7 @@
   )
 
   (module benjiaomodular:AudioJack_3.5mm (layer F.Cu) (tedit 61B04598) (tstamp 61D846CB)
-    (at 137 137)
+    (at 77 141)
     (path /61FAF43E)
     (fp_text reference J1 (at 0 0.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -463,7 +463,7 @@
   )
 
   (module benjiaomodular:AudioJack_3.5mm (layer F.Cu) (tedit 61B04598) (tstamp 61D846EE)
-    (at 149.5 137)
+    (at 89.5 141)
     (path /62032EF1)
     (fp_text reference J2 (at 0 0.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -512,7 +512,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84704)
-    (at 198.405 103.595)
+    (at 138.405 107.595)
     (path /6214F1AD)
     (fp_text reference R1 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -543,7 +543,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D8471A)
-    (at 179.5 51)
+    (at 119.5 55)
     (path /61ED4963)
     (fp_text reference R2 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -574,7 +574,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84730)
-    (at 231.915 72.895)
+    (at 171.915 76.895)
     (path /61ED44AB)
     (fp_text reference R3 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -605,7 +605,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84746)
-    (at 209.815 95.575)
+    (at 149.815 99.575)
     (path /61ED3A3C)
     (fp_text reference R4 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -636,7 +636,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D8475C)
-    (at 221.225 84.075)
+    (at 161.225 88.075)
     (path /61DE535F)
     (fp_text reference R5 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -667,7 +667,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84772)
-    (at 198.405 107.865)
+    (at 138.405 111.865)
     (path /61DE6752)
     (fp_text reference R6 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -698,7 +698,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84788)
-    (at 209.395 99.845)
+    (at 149.395 103.845)
     (path /61DE6AFA)
     (fp_text reference R7 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -729,7 +729,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D8479E)
-    (at 198.405 112.135)
+    (at 138.405 116.135)
     (path /61DE6D70)
     (fp_text reference R8 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -760,7 +760,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D847B4)
-    (at 221.225 88.345)
+    (at 161.225 92.345)
     (path /61DE70D8)
     (fp_text reference R9 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -791,7 +791,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D847CA)
-    (at 179 57)
+    (at 119 61)
     (path /61DE74CA)
     (fp_text reference R10 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -822,7 +822,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D847E0)
-    (at 231.915 77.165)
+    (at 171.915 81.165)
     (path /61DE784A)
     (fp_text reference R11 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -853,7 +853,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D847F6)
-    (at 242.905 68.625)
+    (at 182.905 72.625)
     (path /61DE7B99)
     (fp_text reference R12 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -884,7 +884,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D8480C)
-    (at 242.905 72.895)
+    (at 182.905 76.895)
     (path /61DF288C)
     (fp_text reference R13 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -915,7 +915,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84822)
-    (at 221.225 92.615)
+    (at 161.225 96.615)
     (path /61DF2C78)
     (fp_text reference R14 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -946,7 +946,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84838)
-    (at 209.395 104.115)
+    (at 149.395 108.115)
     (path /61DF2F71)
     (fp_text reference R15 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -977,7 +977,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D8484E)
-    (at 232.215 81.435)
+    (at 172.215 85.435)
     (path /61DF33CB)
     (fp_text reference R16 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1008,7 +1008,7 @@
   )
 
   (module benjiaomodular:Resistor_L6.3mm_D2.5mm_P7.62mm_Horizontal (layer F.Cu) (tedit 61CAABD9) (tstamp 61D84864)
-    (at 220.385 99.845)
+    (at 160.385 103.845)
     (path /61DEF287)
     (fp_text reference R17 (at 12 1.5) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1039,7 +1039,7 @@
   )
 
   (module Potentiometer_THT:Potentiometer_Bourns_3266Y_Vertical (layer F.Cu) (tedit 5A3D4994) (tstamp 61D8487D)
-    (at 174.5 98)
+    (at 114.5 102)
     (descr "Potentiometer, vertical, Bourns 3266Y, https://www.bourns.com/docs/Product-Datasheets/3266.pdf")
     (tags "Potentiometer vertical Bourns 3266Y")
     (path /61D90133)
@@ -1083,7 +1083,7 @@
   )
 
   (module Button_Switch_THT:SW_DIP_SPSTx07_Slide_9.78x19.96mm_W7.62mm_P2.54mm (layer F.Cu) (tedit 5A4E1405) (tstamp 61D84980)
-    (at 152.25 77.25 180)
+    (at 92.25 81.25 180)
     (descr "7x-dip-switch SPST , Slide, row spacing 7.62 mm (300 mils), body size 9.78x19.96mm (see e.g. https://www.ctscorp.com/wp-content/uploads/206-208.pdf)")
     (tags "DIP Switch SPST Slide 7.62mm 300mil")
     (path /61D7CC30)
@@ -1374,7 +1374,7 @@
   )
 
   (module Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm (layer F.Cu) (tedit 5A4E1404) (tstamp 61D849D9)
-    (at 141.8 76.1 180)
+    (at 81.8 80.1 180)
     (descr "2x-dip-switch SPST , Slide, row spacing 7.62 mm (300 mils), body size 9.78x7.26mm (see e.g. https://www.ctscorp.com/wp-content/uploads/206-208.pdf)")
     (tags "DIP Switch SPST Slide 7.62mm 300mil")
     (path /61D8278A)
@@ -1485,7 +1485,7 @@
   )
 
   (module Button_Switch_THT:SW_DIP_SPSTx03_Slide_9.78x9.8mm_W7.62mm_P2.54mm (layer F.Cu) (tedit 5A4E1404) (tstamp 61D860ED)
-    (at 141.8 68 180)
+    (at 81.8 72 180)
     (descr "3x-dip-switch SPST , Slide, row spacing 7.62 mm (300 mils), body size 9.78x9.8mm (see e.g. https://www.ctscorp.com/wp-content/uploads/206-208.pdf)")
     (tags "DIP Switch SPST Slide 7.62mm 300mil")
     (path /61D85CC0)
@@ -1632,7 +1632,7 @@
   )
 
   (module Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile (layer F.Cu) (tedit 5A4E1404) (tstamp 61D84A8D)
-    (at 233.090001 87.880001)
+    (at 173.090001 91.880001)
     (descr "1x-dip-switch SPST , Slide, row spacing 7.62 mm (300 mils), body size 6.7x4.1mm (see e.g. https://www.ctscorp.com/wp-content/uploads/209-210.pdf), LowProfile")
     (tags "DIP Switch SPST Slide 7.62mm 300mil LowProfile")
     (path /61E3A7D1)
@@ -1709,7 +1709,7 @@
   )
 
   (module Package_TO_SOT_THT:TO-92_Inline (layer F.Cu) (tedit 5A1DD157) (tstamp 61D84A9F)
-    (at 233.450001 94.060001)
+    (at 173.450001 98.060001)
     (descr "TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)")
     (tags "to-92 sc-43 sc-43a sot54 PA33 transistor")
     (path /61D7E5FA)
@@ -1746,7 +1746,7 @@
   )
 
   (module Package_SO:TSSOP-10_3x3mm_P0.5mm (layer F.Cu) (tedit 5F3E4A84) (tstamp 61D84ABE)
-    (at 212.5 43.5)
+    (at 152.5 47.5)
     (descr "TSSOP10: plastic thin shrink small outline package; 10 leads; body width 3 mm; (see NXP SSOP-TSSOP-VSO-REFLOW.pdf and sot552-1_po.pdf)")
     (tags "SSOP 0.5")
     (path /61D71811)
@@ -1803,7 +1803,7 @@
   )
 
   (module Package_TO_SOT_SMD:SOT-23-6 (layer F.Cu) (tedit 5A02FF57) (tstamp 61D84AD4)
-    (at 244.880001 82.290001)
+    (at 184.880001 86.290001)
     (descr "6-pin SOT-23 package")
     (tags SOT-23-6)
     (path /61D70E76)
@@ -1847,9 +1847,9 @@
     )
   )
 
-  (gr_line (start 128 168.5) (end 128 40) (layer Edge.Cuts) (width 0.05) (tstamp 61D8D66D))
-  (gr_line (start 158 168.5) (end 128 168.5) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 158 40) (end 158 168.5) (layer Edge.Cuts) (width 0.05))
-  (gr_line (start 128 40) (end 158 40) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 68 172.5) (end 68 44) (layer Edge.Cuts) (width 0.05) (tstamp 61D8D66D))
+  (gr_line (start 98 172.5) (end 68 172.5) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 98 44) (end 98 172.5) (layer Edge.Cuts) (width 0.05))
+  (gr_line (start 68 44) (end 98 44) (layer Edge.Cuts) (width 0.05))
 
 )
