@@ -1,6 +1,5 @@
 #include <avr/pgmspace.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
 #include <MCP4725.h>
 #include <ADS1X15.h>
 #include "definitions.h"
